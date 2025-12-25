@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dragon Tamagotchi</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+    <script type="module" src="./src/main.js"></script>
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div>
+          <div class="title">🐉 Dragon Tamagotchi</div>
+          <div class="subtitle" id="metaLine">loading...</div>
+        </div>
+        <button id="btnSave" class="btn">Save</button>
+      </header>
+
+      <main class="main">
+        <section class="stage">
+          <canvas id="dragonCanvas" class="pixel"></canvas>
+          <div class="overlay" id="overlayText"></div>
+        </section>
+
+        <section class="panel">
+          <div class="bars" id="bars"></div>
+
+          <div class="actions">
+            <button class="btn" id="btnFeed">마나 먹이</button>
+            <button class="btn" id="btnGroom">비늘 손질</button>
+            <button class="btn" id="btnPlay">교감</button>
+            <button class="btn" id="btnRest">휴식</button>
+          </div>
+
+          <div class="tabs">
+            <button class="tab active" data-tab="affinity">친화도</button>
+            <button class="tab" data-tab="runes">룬</button>
+            <button class="tab" data-tab="ritual">의식</button>
+          </div>
+
+          <div class="tabbody">
+            <div id="tab-affinity" class="tabpane active"></div>
+            <div id="tab-runes" class="tabpane"></div>
+            <div id="tab-ritual" class="tabpane"></div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span id="logLine">ready</span>
+      </footer>
+    </div>
+  </body>
+</html>

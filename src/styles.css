@@ -1,0 +1,41 @@
+:root { --bg:#0e1016; --panel:#151a25; --line:#2a3247; --txt:#e9eefc; --mut:#9aa4bd; }
+
+*{ box-sizing:border-box; }
+body{ margin:0; background:var(--bg); color:var(--txt); font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+.app{ max-width:980px; margin:0 auto; padding:16px; display:flex; flex-direction:column; gap:12px; }
+
+.topbar{ display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.title{ font-weight:800; font-size:20px; }
+.subtitle{ color:var(--mut); font-size:13px; margin-top:4px; }
+
+.main{ display:grid; grid-template-columns: 360px 1fr; gap:12px; }
+@media (max-width:860px){ .main{ grid-template-columns: 1fr; } }
+
+.stage{ background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:16px; display:flex; align-items:center; justify-content:center; position:relative; min-height:360px; }
+.overlay{ position:absolute; bottom:10px; left:10px; color:var(--mut); font-size:12px; }
+
+.panel{ background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:16px; display:flex; flex-direction:column; gap:12px; }
+
+.btn{ background:#202a3c; color:var(--txt); border:1px solid var(--line); border-radius:12px; padding:10px 12px; cursor:pointer; }
+.btn:active{ transform: translateY(1px); }
+
+.actions{ display:grid; grid-template-columns: repeat(4, 1fr); gap:8px; }
+@media (max-width:860px){ .actions{ grid-template-columns: repeat(2, 1fr);} }
+
+.bars{ display:grid; gap:8px; }
+.bar{ display:grid; grid-template-columns: 90px 1fr 48px; gap:10px; align-items:center; }
+.bar label{ color:var(--mut); font-size:12px; }
+.track{ height:10px; background:#0b0d12; border:1px solid var(--line); border-radius:999px; overflow:hidden; }
+.fill{ height:100%; width:50%; background:#6aa5ff; }
+.bar span{ color:var(--mut); font-size:12px; text-align:right; }
+
+.tabs{ display:flex; gap:8px; }
+.tab{ flex:1; background:#101520; border:1px solid var(--line); border-radius:12px; padding:10px; color:var(--mut); cursor:pointer; }
+.tab.active{ color:var(--txt); background:#1a2333; }
+
+.tabpane{ display:none; padding:10px; border:1px solid var(--line); border-radius:12px; background:#101520; }
+.tabpane.active{ display:block; }
+
+.pixel{ image-rendering: pixelated; image-rendering: crisp-edges; }
+
+.footer{ color:var(--mut); font-size:12px; padding:4px 2px; }
